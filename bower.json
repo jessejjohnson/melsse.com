@@ -1,0 +1,21 @@
+{
+  "name": "melesse.com",
+  "homepage": "https://github.com/jessejjohnson/melesse.com",
+  "authors": [
+    "Jesse Johnson <johnson.jesse@live.com>"
+  ],
+  "description": "Melissa & Jesse",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton": "^2.0.4"
+  }
+}
