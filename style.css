@@ -1,6 +1,15 @@
-.header  {
-    margin-top: 6rem;
-  }
+.header {
+    margin-top: 4rem;
+}
+
+.header hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.header .muted {
+    color: #E1E1E1;
+}
 
 @media (min-width: 550px) {
     .header {
