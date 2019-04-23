@@ -42,10 +42,8 @@
 /**! 40. Alerts **/
 /**! 41. Progress - Horizontal **/
 /**! 42. Theme Overrides **/
+/**! 43. Raleyway Font **/
 /**!**************/
-/**!**************/
-/**!**************/
-/**! 01. Reset **/
 *,
 h1,
 h2,
@@ -2207,6 +2205,7 @@ section.slider .flickity-page-dots {
   transition: opacity 0.3s ease !important;
   -webkit-transition: opacity 0.3s ease !important;
   -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 .parallax:first-child .slides li > .background-image-holder,
 .parallax:first-child .background-image-holder {
@@ -9355,4 +9354,17 @@ footer.footer-7 {
     margin-left: auto;
     margin-right: auto;
   }
+}
+/*! -- 43 Raleyway Font -- */
+.menu > li{
+	font-family: 'Raleway','Verdana','Helvetica', sans-serif;	
+}
+
+.btn,.btn__text,button{
+	font-family: 'Raleway','Verdana','Helvetica', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6{
+  font-family: 'Raleway','Helvetica', sans-serif;
 }
