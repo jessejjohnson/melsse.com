@@ -1,0 +1,52 @@
+body {
+    color: #162f4a;
+  }
+  
+  
+  h1,h2,h3,h4,h5,h6,
+  .h1,.h2,.h3,.h4,.h5,.h6{
+    color: #162f4a;
+    font-family: "Northwell regular";
+  }
+  
+  .name {
+    margin-bottom: 24px;
+  }
+  
+    .name-wrap {
+      margin: 24px 0;
+      letter-spacing: normal;
+    }
+  
+      .name-wrap.name-wrap__top{
+        margin-bottom: 6px;
+      }
+  
+      .name-wrap.name-wrap__bottom{
+        margin-top: 6px;
+      }
+  
+    .name-text{
+      margin: 0;
+      line-height: 1;
+      font-family: "Northwell regular";
+      text-transform: lowercase;
+      letter-spacing: normal;
+    }
+  
+    h1.name-text{
+      font-size: 8em;
+    }
+  
+    footer .name-text {
+      font-size: 3em;
+    }
+  
+    .name-conjunction {
+      font-size: 20.8px;
+      font-family: "Futura Md BT Medium";
+      letter-spacing: 4.1px;
+      color: #162f4a;
+      line-height: 1;
+      text-transform: uppercase;
+    }
