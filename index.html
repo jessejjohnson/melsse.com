@@ -35,17 +35,40 @@
       font-style: normal;
       font-display: swap;
     }
-    body { margin: 0; padding: clamp(3rem, 7vw, 6rem) 1rem; background: #fff; color: #162f4a; text-align: center; }
-    header, footer { padding: 2rem 0; }
-    header { padding-top: 3.5rem; }
-    .names { display: grid; gap: 0; margin: 0; font-family: Northwell, cursive; font-weight: 400; line-height: .85; }
-    h1 { font-size: clamp(5rem, 14vw, 8rem); }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      height: 100vh;
+      height: 100dvh;
+      padding: min(3vh, 2rem) min(4vw, 2rem);
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      gap: min(3vh, 2rem);
+      background: #fff;
+      color: #162f4a;
+      text-align: center;
+    }
+    header { padding-top: .3em; font-size: min(14vw, 10vh, 8rem); }
+    .names { margin: 0; font-family: Northwell, cursive; font-weight: 400; }
+    h1.names { display: grid; font-size: 1em; line-height: .85; padding-bottom: .2em; }
     .and { font: 400 .17em/1.5 system-ui, sans-serif; letter-spacing: .2em; text-transform: uppercase; }
-    main { position: relative; max-width: 62.5rem; margin: clamp(3rem, 7vw, 6rem) auto; }
-    main::after { content: ""; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 clamp(1.5rem, 4vw, 3rem) clamp(.5rem, 1.5vw, 1rem) #fff; }
-    img { display: block; width: 100%; height: auto; }
-    footer .names { display: flex; justify-content: center; align-items: baseline; gap: .3em; font-size: 2rem; line-height: 1.3; color: #687786; }
-    footer .and { font-size: .75rem; letter-spacing: .1em; }
+    main { min-width: 0; min-height: 0; display: flex; align-items: center; justify-content: center; }
+    img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: min(100%, 62.5rem);
+      max-height: 100%;
+      mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent), linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
+      mask-composite: intersect;
+    }
+    footer .names { display: flex; justify-content: center; align-items: baseline; gap: .3em; font-size: min(6vw, 4vh, 2rem); line-height: 1.3; color: #687786; }
+    footer .and { font-size: .375em; letter-spacing: .1em; }
+    @supports (height: 100dvh) {
+      body { padding-block: min(3dvh, 2rem); gap: min(3dvh, 2rem); }
+      header { font-size: min(14vw, 10dvh, 8rem); }
+      footer .names { font-size: min(6vw, 4dvh, 2rem); }
+    }
   </style>
 </head>
 <body>
@@ -53,7 +76,7 @@
   <main>
     <img src="assets/family-1600.webp"
       srcset="assets/family-800.webp 800w, assets/family-1600.webp 1600w"
-      sizes="(min-width: 1032px) 1000px, calc(100vw - 32px)"
+      sizes="min(92vw, 90vh, 1000px)"
       width="1600" height="1067"
       alt="Melissa and Jesse with their family on the beach."
       fetchpriority="high" decoding="async">
